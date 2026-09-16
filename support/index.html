@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Ek Sur</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F8F5ED;
+      --navy: #101C2C;
+      --gold: #C9A44C;
+      --taupe: #9C8C76;
+      --sand: #DCCBAC;
+      --blue-muted: #4D6A8C;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--cream); color: var(--navy); line-height: 1.7; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { background: var(--navy); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { color: var(--cream); font-size: 1.1rem; font-weight: 700; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: rgba(248,245,237,0.75); font-size: 0.875rem; }
+    .nav-links a:hover { color: var(--cream); text-decoration: none; }
+
+    .page-header { background: var(--navy); color: var(--cream); padding: 56px 24px 48px; text-align: center; }
+    .page-header .label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 12px; }
+    .page-header h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 700; }
+    .page-header p { margin-top: 12px; font-size: 1rem; color: rgba(248,245,237,0.7); }
+
+    .content { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+
+    .contact-card { background: var(--navy); color: var(--cream); border-radius: 20px; padding: 36px 32px; margin-bottom: 56px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .contact-card .contact-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); }
+    .contact-card h2 { font-size: 1.5rem; font-weight: 700; }
+    .contact-card p { font-size: 0.95rem; color: rgba(248,245,237,0.7); line-height: 1.65; }
+    .contact-email { display: inline-block; margin-top: 8px; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: 12px 24px; border-radius: 10px; }
+    .contact-email:hover { opacity: 0.9; text-decoration: none; }
+
+    h2.section { font-size: 1.25rem; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
+    .faq-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+    .faq-item { background: white; border-radius: 14px; border: 1px solid rgba(220,203,172,0.5); overflow: hidden; }
+    .faq-q { font-weight: 700; font-size: 0.95rem; color: var(--navy); padding: 18px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-q::after { content: "+"; font-size: 1.2rem; font-weight: 400; color: var(--gold); flex-shrink: 0; }
+    .faq-a { font-size: 0.9rem; color: var(--blue-muted); padding: 0 20px 18px; line-height: 1.7; }
+
+    footer { background: var(--navy); color: rgba(248,245,237,0.6); font-size: 0.85rem; padding: 40px 24px; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: rgba(248,245,237,0.6); }
+    .footer-links a:hover { color: var(--cream); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../" class="nav-brand">Ek Sur</a>
+  <div class="nav-links">
+    <a href="../privacy/">Privacy</a>
+    <a href="./">Support</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <p class="label">Help</p>
+  <h1>Support</h1>
+  <p>We're here to help with any questions about Ek Sur.</p>
+</div>
+
+<div class="content">
+
+  <div class="contact-card">
+    <span class="contact-label">Contact Us</span>
+    <h2>Get in touch</h2>
+    <p>For help, bug reports, or feedback about the Ek Sur app, email us directly. We aim to respond within 1–2 business days.</p>
+    <a href="mailto:harry@fittheorem.com" class="contact-email">harry@fittheorem.com</a>
+  </div>
+
+  <h2 class="section">Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <div class="faq-q">How do I start a live Kirtan session?</div>
+      <div class="faq-a">
+        On the Home screen, tap the <strong>Host</strong> card. Browse and select the Shabad you will be singing, then enter your name as the Kirtan host and tap <strong>Start Session</strong>. Your Sangat can then join from their own devices.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How does my Sangat join my session?</div>
+      <div class="faq-a">
+        Anyone on the same or different network can open Ek Sur and tap the <strong>Sangat</strong> card on the Home screen (or tap <strong>Join Kirtan</strong> when a live session is shown). Your active session will appear in the list for them to join.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Voice search isn't working — what should I check?</div>
+      <div class="faq-a">
+        First, make sure microphone and speech recognition permissions are enabled: go to iOS <strong>Settings → Privacy & Security → Microphone</strong> and <strong>Speech Recognition</strong> and ensure Ek Sur is allowed. On a fresh install, you will be asked the first time you tap the microphone icon — tap <strong>Allow</strong> on both prompts, then tap the microphone again to begin searching.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I search in Punjabi (Gurmukhi)?</div>
+      <div class="faq-a">
+        Yes. The search bar accepts both Gurmukhi script and English transliteration. You can type "Hukamee" or speak the opening words of a Shabad and the app will find the best match.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">The Home screen shows a live session but Join shows nothing. What's happening?</div>
+      <div class="faq-a">
+        This can happen if a previous session was not properly ended (for example, if the app was deleted and reinstalled while a session was still active). In this case the stale session will automatically be filtered out from the Join screen after 12 hours. If you need it cleared sooner, contact us at the email above.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I create a custom playlist?</div>
+      <div class="faq-a">
+        Navigate to the <strong>Library</strong> tab, open any Shabad, and look for the option to add it to your Custom Playlist. Your saved Shabads appear in the <strong>Custom Playlist</strong> section at the top of the Library.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does the app work offline?</div>
+      <div class="faq-a">
+        The complete Gurbani library is stored on your device and can be browsed offline. Live Kirtan session features require an internet connection to sync between devices.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Do I need to create an account?</div>
+      <div class="faq-a">
+        No. Ek Sur does not require any account, login, or email address. All features — including hosting and joining live sessions — work without registration.
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Ek Sur</span>
+    <div class="footer-links">
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="./">Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

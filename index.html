@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ek Sur — Gurbani & Live Kirtan</title>
+  <meta name="description" content="Ek Sur is a Gurbani app for Sikhs. Browse 5,500+ Shabads, join live Kirtan sessions, and search by voice in Gurmukhi or English." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F8F5ED;
+      --navy: #101C2C;
+      --gold: #C9A44C;
+      --taupe: #9C8C76;
+      --sand: #DCCBAC;
+      --blue-muted: #4D6A8C;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--cream); color: var(--navy); line-height: 1.6; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav { background: var(--navy); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { color: var(--cream); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.02em; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: rgba(248,245,237,0.75); font-size: 0.875rem; }
+    .nav-links a:hover { color: var(--cream); text-decoration: none; }
+
+    /* HERO */
+    .hero { max-width: 760px; margin: 0 auto; padding: 80px 24px 64px; text-align: center; }
+    .khanda { font-size: 3rem; margin-bottom: 16px; line-height: 1; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; line-height: 1.15; }
+    .hero-punjabi { font-size: 1.3rem; color: var(--taupe); margin-top: 8px; letter-spacing: 0.02em; }
+    .hero-sub { font-size: 1.1rem; color: var(--blue-muted); margin-top: 20px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.65; }
+    .divider { width: 64px; height: 2px; background: var(--gold); margin: 32px auto; border-radius: 2px; }
+    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+    .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: 14px 28px; border-radius: 12px; letter-spacing: 0.01em; }
+    .btn-primary:hover { opacity: 0.9; text-decoration: none; }
+    .btn-outline { display: inline-block; border: 1.5px solid var(--sand); color: var(--navy); font-weight: 600; font-size: 0.95rem; padding: 14px 28px; border-radius: 12px; background: transparent; }
+    .btn-outline:hover { background: rgba(220,203,172,0.2); text-decoration: none; }
+
+    /* FEATURES */
+    .features { background: white; padding: 72px 24px; }
+    .features-inner { max-width: 900px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; color: var(--navy); line-height: 1.25; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 48px; }
+    .feature-card { background: var(--cream); border-radius: 16px; padding: 28px 24px; border: 1px solid rgba(220,203,172,0.5); }
+    .feature-icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .feature-card p { font-size: 0.9rem; color: var(--taupe); line-height: 1.6; }
+
+    /* HOW IT WORKS */
+    .how { max-width: 760px; margin: 0 auto; padding: 72px 24px; }
+    .steps { margin-top: 40px; display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: var(--cream); font-size: 0.875rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .step-body h4 { font-weight: 700; font-size: 1rem; color: var(--navy); margin-bottom: 4px; }
+    .step-body p { font-size: 0.9rem; color: var(--blue-muted); line-height: 1.6; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(248,245,237,0.6); font-size: 0.85rem; padding: 40px 24px; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: rgba(248,245,237,0.6); }
+    .footer-links a:hover { color: var(--cream); }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 16px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Ek Sur</span>
+  <div class="nav-links">
+    <a href="privacy/">Privacy</a>
+    <a href="support/">Support</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="khanda">☬</div>
+  <h1>Ek Sur</h1>
+  <p class="hero-punjabi">ਏਕ ਸੁਰ</p>
+  <div class="divider"></div>
+  <p class="hero-sub">
+    A Gurbani companion for Sikhs. Browse the complete Gurbani collection, host live Kirtan sessions for your Sangat, and search Shabads by voice in Gurmukhi or English.
+  </p>
+  <div class="cta-row">
+    <a href="#features" class="btn-primary">Explore Features</a>
+    <a href="support/" class="btn-outline">Get Support</a>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="features-inner">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything you need for Kirtan</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📖</div>
+        <h3>Complete Gurbani Library</h3>
+        <p>Browse 5,500+ Shabads from the complete Gurbani collection, including Japji Sahib, Sukhmani Sahib, and full Nitnem Banis.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎤</div>
+        <h3>Live Kirtan Sessions</h3>
+        <p>Host a live Kirtan session for your Sangat. Your current Pankti syncs in real time to every device in the room.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h3>Join as Sangat</h3>
+        <p>Join any active Kirtan session and follow the Shabad line-by-line from your own device — no paper required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Voice Search</h3>
+        <p>Search in Gurmukhi or English by typing or speaking. Voice search intelligently handles transliteration and phonetic variations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Custom Playlists</h3>
+        <p>Build your own Shabad collection for a specific occasion — Anand Karaj, Akhand Path, or any custom Kirtan programme.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌙</div>
+        <h3>Gurmukhi Script</h3>
+        <p>Every Shabad is shown in Gurmukhi alongside English transliteration so anyone can follow along.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <p class="section-label">How it works</p>
+  <h2 class="section-title">Kirtan together, from any device</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>Host selects a Shabad</h4>
+        <p>The Kirtan host browses the library or searches by voice, selects the Shabad, and enters their name to start a session.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>Sangat joins on their phones</h4>
+        <p>Everyone in the room opens Ek Sur and taps "Join Kirtan." The active session appears immediately — no code or QR needed.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>Pankti syncs in real time</h4>
+        <p>As the host advances through each line, every Sangat member's screen updates automatically so the whole group stays together.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h4>Host ends the session</h4>
+        <p>When Kirtan is complete, the host stops the session. All devices return gracefully to the home screen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Ek Sur. Made with 🙏 for the Sangat.</span>
+    <div class="footer-links">
+      <a href="privacy/">Privacy Policy</a>
+      <a href="support/">Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
